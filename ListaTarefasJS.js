@@ -1,17 +1,3 @@
-/*let tasks = [
-    {id: 1, description: 'comprar pão', checked: false},
-    {id: 2, description: 'fazer a barba', checked: false},
-    {id: 3, description: 'ler um livro', checked: false},
-    {id: 4, description: 'estudar', checked: false},
-    {id: 5, description: 'ir no mercado', checked: false},
-    {id: 6, description: 'pagar as contas', checked: false},
-    {id: 7, description: 'passear com o cachorro', checked: false},
-    {id: 8, description: 'fazer o almoço', checked: false},
-    {id: 9, description: 'malhar', checked: false},
-    {id: 10, description: 'aguar as plantas', checked: false},
-    {id: 11, description: 'jogar', checked: false},
-]*/
-
 const renderTasksProgressData = (tasks) => {
     let tasksProgress;
     const tasksProgressDOM = document.getElementById('tasks-progress');
@@ -93,10 +79,7 @@ const onCheckboxClick = (event) => {
     const tasks = getTasksFromLocalStorage();
 
 	const updatedTasks = tasks.map((task) => {
-		/*if (parseInt(task.id) === parseInt(id)){
-			return {...task, checked: event.target.checked}
-		}
-		return task*/
+		
 		return parseInt(task.id) === parseInt(id)
 		? {...task, checked: event.target.checked}
 		: task
